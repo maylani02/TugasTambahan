@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+One&display=swap');
+:root{
+    --Hitam:#1E1E1E;
+    --Abu1:#222325;
+    --Abu2: #535456;
+    --Kuning: #FFD600;
+    --Putih:#fff;
+   
+}
+
+body, html {
+    margin: 0 0 0 0;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border: none;
+}
+
+.box-atas{
+    text-align: center;
+    font-style: normal;
+    letter-spacing: normal;
+    font-family: 'Inter';
+    color: var(--Putih);
+    font-weight: 700;
+    font-size:90px;
+    height:90%;
+}
+
+.box-bawah{
+    margin: 0;
+    height: 5vh;
+    width: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.box-kanan{
+    background-color: var(--Hitam);
+}
+
+.box-kiri{
+    background-color: var(--Abu1);
+}
+
+.box-kanan,.box-kiri{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.box-atas,.box-bawah{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    
+}
+
+.poin-kiri{
+    top: 40%;
+    left:10%;
+    position: fixed;
+    text-align: center;
+}
+
+.poin-kanan{
+    top: 40%;
+    left: 60%;
+    position: fixed;
+    text-align: center;
+}
+
+.box-bawah>.kelompok1>.identitas{
+	grid-template-columns: 7% 93%;
+    display: grid;
+    margin-bottom: 0;
+}    
+
+.box-bawah>.kelompok2>.identitas{
+    grid-template-columns: 93% 7%;
+    display: grid;  
+    margin: 0;  
+}
+
+.kelompok1>.identitas>.ciri{
+    padding: 5px;
+    text-align: center;
+    color: var(--Hitam);
+    background-color: var(--Kuning);
+    margin-bottom: 0;
+}
+
+.kelompok1>.identitas>.nama{
+    padding: 5px;
+    text-align: left;
+    color: var(--Putih);
+    background-color:var(--Abu1);
+    margin-bottom: 0;
+}
+
+.kelompok2>.identitas>.ciri{
+    padding: 5px;
+    color: var(--Putih);
+    text-align: right;
+    background-color: var(--Abu2);
+    margin-bottom: 0;
+}
+
+.kelompok2>.identitas>.nama{
+    padding: 5px;
+    text-align: center;
+    background-color: var(--Kuning);
+    margin-bottom: 0;
+}
+
+
+@media(max-width:992px){
+    .box-atas{
+        font-size: 50px;       
+        height: 95%;       
+    }
+
+    .box-bawah{
+    	font-size: 10px;
+    }
+
+    .poin-kanan{
+        top: 45%;
+        left:75%;
+    }
+    .poin-kiri{
+        left:15%;
+        top: 50%;
+    }
+    .box-bawah>.kelompok1>.identitas{
+        grid-template-columns: 16% 90%;
+        margin-bottom: 0;
+        display: grid;
+    }
+    .box-bawah>.kelompok2>.identitas{
+        grid-template-columns: 84% 16%;
+        margin-bottom: 0;
+        display: grid;
+    }
+} 
